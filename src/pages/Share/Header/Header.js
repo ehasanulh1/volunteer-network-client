@@ -4,13 +4,12 @@ import logo from '../../../assets/logos/Group 1329.png'
 
 const Header = () => {
     const menuItems = <>
-        <li><Link to="/" className='text-lg'>Home</Link></li>
-        <li><a href='#about' className='text-lg'>About</a></li>
-        <li><a href='#services' className='text-lg'>Services</a></li>
-        <li><a href="#products" className='text-lg'>Products</a></li>
-        <li><Link to="/" className='text-lg'>Blog</Link></li>
-        <li><Link to="/" className='text-lg'>Contact</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/donation">Donation</Link></li>
+        <li><Link to="/events">Events</Link></li>
+        <li><Link to="/blog">Blog</Link></li>
     </>
+
     return (
         <div style={{ maxWidth: '1280px' }} className="navbar mx-auto bg-base-100">
             <div className="navbar-start">
@@ -22,16 +21,18 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <img className='h-16' src={logo} alt="logo" />
+                <Link to="/">
+                    <img className='h-16' src={logo} alt="" />
+                </Link>
             </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-
+            <div className="navbar-end mr-5 hidden lg:flex">
+                <ul className="menu menu-horizontal font-medium">
+                    {menuItems}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <button className='rounded-md text-white py-3.5 px-12 bg-blue-500 mr-3'>Register</button>
-                <button className='rounded-md text-white py-3.5 px-12 bg-gray-800'>Admin</button>
+            <div className="navbar-end w-fit">
+                <button className='rounded-md text-white py-3.5 px-12 bg-blue-500 hover:bg-blue-700 mr-3'>Register</button>
+                <button className='rounded-md text-white py-3.5 px-12 bg-gray-800 hover:bg-black'>Admin</button>
             </div>
         </div>
     );
