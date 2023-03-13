@@ -11,7 +11,7 @@ const Header = () => {
     </>
 
     return (
-        <div style={{ maxWidth: '1280px' }} className="navbar mx-auto bg-base-100">
+        <div className="navbar py-11">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

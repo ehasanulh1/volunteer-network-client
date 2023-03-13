@@ -1,0 +1,11 @@
+.top-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1440px;
+    height: 496px;
+    display: inline-block;
+    background-color: white;
+    opacity: 90%;
+}
